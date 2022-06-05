@@ -1,101 +1,66 @@
-import "./sidebar.css";
-import {
-  LineStyle,
-  Timeline,
-  TrendingUp,
-  PermIdentity,
-  AttachMoney,
-  BarChart,
-  MailOutline,
-  DynamicFeed,
-  ChatBubbleOutline,
-  WorkOutline,
-  Report,
-} from "@material-ui/icons";
+import React, { useEffect, useState } from 'react'
+import './sidebar.scss'
+import { Link, useLocation } from 'react-router-dom'
+import { images } from '../../constants'
+import sidebarNav from '../../configs/sidebarNav'
 
-export default function Sidebar() {
+
+const Sidebar = () => {
+  const [activeIndex, setActiveIndex] = useState(0)
+  const location = useLocation()
+
+  useEffect(() => {
+    const curPath = window.location.pathname.split('/jpl-ui/')[1]
+    const activeItem = sidebarNav.findIndex(item => item.section === curPath)
+
+    setActiveIndex(curPath.length === 0 ? 0 : activeItem)
+  }, [location])
+
+
+  const closeSidebar = () => {
+    document.querySelector('.main__content').style.transform = 'scale(1) translateX(0)'
+    setTimeout(() => {
+      document.body.classList.remove('sidebar-open')
+      document.querySelector('.main__content').style = ''
+    }, 500);
+  }
+
   return (
-    <div className="sidebar">
-      <div className="sidebarWrapper">
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Dashboard</h3>
-          <ul className="sidebarList">
-            
-            <li className="sidebarListItem active">
-              <LineStyle className="sidebarIcon" />
-              Home
-            </li>
-            
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Reports
-            </li>
-            <li className="sidebarListItem">
-              <TrendingUp className="sidebarIcon" />
-              Analytics
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Football</h3>
-          <ul className="sidebarList">
-            
-              <li className="sidebarListItem">
-                <PermIdentity className="sidebarIcon" />
-                JPL League Table
-              </li>
-           
-           
-              <li className="sidebarListItem">
-                <TrendingUp className="sidebarIcon" />
-                TvT League Table
-              </li>
-            
-            <li className="sidebarListItem">
-              <AttachMoney className="sidebarIcon" />
-                Transfers
-            </li>
-            <li className="sidebarListItem">
-              <BarChart className="sidebarIcon" />
-              GW Analysis
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">Notifications</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <MailOutline className="sidebarIcon" />
-              Mail
-            </li>
-            <li className="sidebarListItem">
-              <DynamicFeed className="sidebarIcon" />
-              Feedback
-            </li>
-            <li className="sidebarListItem">
-              <ChatBubbleOutline className="sidebarIcon" />
-              Messages
-            </li>
-          </ul>
-        </div>
-        <div className="sidebarMenu">
-          <h3 className="sidebarTitle">TvT</h3>
-          <ul className="sidebarList">
-            <li className="sidebarListItem">
-              <WorkOutline className="sidebarIcon" />
-              Fixtures
-            </li>
-            <li className="sidebarListItem">
-              <Timeline className="sidebarIcon" />
-              Chips Account
-            </li>
-            <li className="sidebarListItem">
-              <Report className="sidebarIcon" />
-              Reports
-            </li>
-          </ul>
+    <div className='sidebar'>
+      <div className="sidebar__logo">
+        <img src={images.logo} alt="" />
+        <div className="sidebar-close" onClick={closeSidebar}>
+          <i className='bx bx-x' ></i>
         </div>
       </div>
+      <div className="sidebar__menu">
+        {
+          sidebarNav.map((nav, index) => (
+            <Link to={nav.link} key={`nav-${index}`} className={`sidebar__menu__item ${activeIndex === index && `active`}`} onClick={closeSidebar}>
+              <div className="sidebar__menu__item__icon">
+                {nav.icon}
+              </div>
+              <div className="sidebar__menu__item_text">
+                {nav.text}
+              </div>
+            </Link>
+
+          ))
+        }
+
+        <div className="sidebar__menu__item">
+          <div className="sidebar__menu__item__icon">
+            <i className='bx bx-log-out'></i>
+          </div>
+          <div className="sidebar__menu__item__text">
+            Logout
+          </div>
+
+        </div>
+      </div>
+
     </div>
-  );
+  )
 }
+
+export default Sidebar
