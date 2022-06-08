@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/jpl-ui/static/css/main.7981c727.css",
-    "main.js": "/jpl-ui/static/js/main.a7ab7132.js",
+    "main.css": "/jpl-ui/static/css/main.1855279f.css",
+    "main.js": "/jpl-ui/static/js/main.38e41613.js",
     "static/media/boxicons.svg": "/jpl-ui/static/media/boxicons.17f6cb4eef77f07f2caa.svg",
     "static/media/boxicons.eot": "/jpl-ui/static/media/boxicons.dfc882ec9689f820c7c9.eot",
     "static/media/boxicons.woff": "/jpl-ui/static/media/boxicons.1a7e2e2bf3a855e674d4.woff",
@@ -10,11 +10,11 @@
     "static/media/boxicons.woff2": "/jpl-ui/static/media/boxicons.60f603cccbdff82a523c.woff2",
     "static/media/logo.svg": "/jpl-ui/static/media/logo.dda2f44262639a5b4dd2ebc588be0626.svg",
     "index.html": "/jpl-ui/index.html",
-    "main.7981c727.css.map": "/jpl-ui/static/css/main.7981c727.css.map",
-    "main.a7ab7132.js.map": "/jpl-ui/static/js/main.a7ab7132.js.map"
+    "main.1855279f.css.map": "/jpl-ui/static/css/main.1855279f.css.map",
+    "main.38e41613.js.map": "/jpl-ui/static/js/main.38e41613.js.map"
   },
   "entrypoints": [
-    "static/css/main.7981c727.css",
-    "static/js/main.a7ab7132.js"
+    "static/css/main.1855279f.css",
+    "static/js/main.38e41613.js"
   ]
 }
