@@ -6,16 +6,16 @@ const sidebarNav = [
         text: 'Home'
     },
     {
-        link: '/jpl-ui/football',
-        section: 'football',
+        link: '/jpl-ui/jpl',
+        section: 'JPL',
         icon: <i className='bx bx-receipt' ></i>,
-        text: 'Football'
+        text: 'JPL Season 6'
     },
     {
-        link: '/jpl-ui/cricket',
-        section: 'cricket',
+        link: '/jpl-ui/tvt',
+        section: 'tvt',
         icon: <i className='bx bx-cube'></i>,
-        text: 'Cricket'
+        text: 'Team vs Team'
     },
     {
         link: '/jpl-ui/rewards',
