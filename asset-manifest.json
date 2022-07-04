@@ -1,20 +1,25 @@
 {
   "files": {
-    "main.css": "/jpl-ui/static/css/main.1855279f.css",
-    "main.js": "/jpl-ui/static/js/main.38e41613.js",
-    "static/media/boxicons.svg": "/jpl-ui/static/media/boxicons.17f6cb4eef77f07f2caa.svg",
-    "static/media/boxicons.eot": "/jpl-ui/static/media/boxicons.dfc882ec9689f820c7c9.eot",
-    "static/media/boxicons.woff": "/jpl-ui/static/media/boxicons.1a7e2e2bf3a855e674d4.woff",
-    "static/media/boxicons.ttf": "/jpl-ui/static/media/boxicons.22afc8ee5cfc540cddff.ttf",
-    "static/media/avt.jpg": "/jpl-ui/static/media/avt.33addfed0c6363bc311d.jpg",
-    "static/media/boxicons.woff2": "/jpl-ui/static/media/boxicons.60f603cccbdff82a523c.woff2",
-    "static/media/logo.svg": "/jpl-ui/static/media/logo.dda2f44262639a5b4dd2ebc588be0626.svg",
-    "index.html": "/jpl-ui/index.html",
-    "main.1855279f.css.map": "/jpl-ui/static/css/main.1855279f.css.map",
-    "main.38e41613.js.map": "/jpl-ui/static/js/main.38e41613.js.map"
+    "main.css": "/JPL/static/css/main.0f5bdcb7.chunk.css",
+    "main.js": "/JPL/static/js/main.becbf0a1.chunk.js",
+    "main.js.map": "/JPL/static/js/main.becbf0a1.chunk.js.map",
+    "runtime-main.js": "/JPL/static/js/runtime-main.df0e1fb6.js",
+    "runtime-main.js.map": "/JPL/static/js/runtime-main.df0e1fb6.js.map",
+    "static/js/2.6afee057.chunk.js": "/JPL/static/js/2.6afee057.chunk.js",
+    "static/js/2.6afee057.chunk.js.map": "/JPL/static/js/2.6afee057.chunk.js.map",
+    "static/js/3.c25d52be.chunk.js": "/JPL/static/js/3.c25d52be.chunk.js",
+    "static/js/3.c25d52be.chunk.js.map": "/JPL/static/js/3.c25d52be.chunk.js.map",
+    "index.html": "/JPL/index.html",
+    "static/css/main.0f5bdcb7.chunk.css.map": "/JPL/static/css/main.0f5bdcb7.chunk.css.map",
+    "static/js/2.6afee057.chunk.js.LICENSE.txt": "/JPL/static/js/2.6afee057.chunk.js.LICENSE.txt",
+    "static/media/boxicons.min.css": "/JPL/static/media/boxicons.cbd149c5.ttf",
+    "static/media/logo.ef7bfcda.png": "/JPL/static/media/logo.ef7bfcda.png",
+    "static/media/tuat.7ec76cec.png": "/JPL/static/media/tuat.7ec76cec.png"
   },
   "entrypoints": [
-    "static/css/main.1855279f.css",
-    "static/js/main.38e41613.js"
+    "static/js/runtime-main.df0e1fb6.js",
+    "static/js/2.6afee057.chunk.js",
+    "static/css/main.0f5bdcb7.chunk.css",
+    "static/js/main.becbf0a1.chunk.js"
   ]
 }
