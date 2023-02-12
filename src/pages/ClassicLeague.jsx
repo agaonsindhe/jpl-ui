@@ -18,13 +18,15 @@ const renderLeagueStandingHead = (item, index) => (
 
 const renderLeagueStadningBody = (item, index) => (
     <tr key={index}>
-        <td>{item.id}</td>
-        <td>{item.user}</td>
-        <td>{item.price}</td>
+        <td>{item.teamname}</td>
+        <td>{item.managername}</td>
         <td>{item.date}</td>
-        <td>
+        <td>{item.totpoints}</td>
+        <td>{item.gwpoints}</td>
+        
+        {/* <td>
             <Badge type={orderStatus[item.status]} content={item.status} />
-        </td>
+        </td> */}
     </tr>
 )
 const ClassicLeague = () => {
