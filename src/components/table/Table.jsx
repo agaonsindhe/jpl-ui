@@ -1,4 +1,4 @@
-import React, {useState} from 'react'
+import React, {useEffect, useState} from 'react'
 
 import './table.css'
 
@@ -22,12 +22,19 @@ const Table = props => {
 
     const selectPage = page => {
         const start = Number(props.limit) * page
-        const end = start + Number(props.limit)
+        const end = start + Number(props.limit);
+        console.log(props.bodyData);
 
         setDataShow(props.bodyData.slice(start, end))
 
         setCurrPage(page)
     }
+
+    // useEffect(() => {
+    //     setDataShow([...dataShow,...props.bodyData]);
+    //   }, [props.bodyData]);
+      
+   
 
     return (
         <div>
@@ -45,10 +52,10 @@ const Table = props => {
                         ) : null
                     }
                     {
-                        props.bodyData && props.renderBody ? (
+                        props.bodyData && props.renderBody && props.bodyData.length > 0 ? (
                             <tbody>
                                 {
-                                    dataShow.map((item, index) => props.renderBody(item, index))
+                                    dataShow.map((item,index) => props.renderBody(item,index))
                                 }
                             </tbody>
                         ) : null
