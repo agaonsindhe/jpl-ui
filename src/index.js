@@ -1,31 +1,19 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import reportWebVitals from './reportWebVitals'
-
-import { createStore } from 'redux'
-
-import { Provider } from 'react-redux'
-
-import rootReducer from './redux/reducers'
-
-import './assets/boxicons-2.0.7/css/boxicons.min.css'
-import './assets/css/grid.css'
-import './assets/css/theme.css'
-import './assets/css/index.css'
-
-import Layout from './components/layout/Layout'
-
-const store = createStore(
-  rootReducer
-)
-
-document.title = 'JPL'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Provider } from "react-redux";
+import store from "./store";
+import "./index.css";
+import App from "./App";
+import * as serviceWorker from "./serviceWorker";
 
 ReactDOM.render(
   <Provider store={store}>
-    <React.StrictMode>
-      <Layout />
-    </React.StrictMode>
+    <App />
   </Provider>,
-  document.getElementById('root')
+  document.getElementById("root")
 );
+
+// If you want your app to work offline and load faster, you can chađinge
+// unregister() to register() below. Note this comes with some pitfalls.
+// Learn more about service workers: https://bit.ly/CRA-PWA
+serviceWorker.unregister();
